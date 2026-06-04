@@ -1,0 +1,45 @@
+/* Configuración para que el fondo ocupe toda la pantalla */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0c1426; /* Color de fondo oscuro para que resalten */
+  overflow-x: hidden; /* Evita que las burbujas causen scroll horizontal */
+}
+
+/* El contenedor principal de las burbujas */
+.bubbles {
+  position: fixed; /* Se queda fijo al hacer scroll */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Obliga al efecto a quedarse atrás del contenido */
+  
+  /* Creamos muchas burbujas con sombras de caja múltiples. 
+     Cada sombra define x-offset, y-offset, blur-radius, y color/opacidad. */
+  box-shadow: 
+    10vw 20vh 5px rgba(79, 70, 229, 0.4), 
+    20vw 80vh 12px rgba(22, 163, 74, 0.3),
+    35vw 40vh 8px rgba(79, 70, 229, 0.5), 
+    50vw 10vh 15px rgba(22, 163, 74, 0.2),
+    65vw 70vh 9px rgba(79, 70, 229, 0.3), 
+    80vw 90vh 6px rgba(22, 163, 74, 0.4),
+    /* Añade más sombras aquí para aumentar la densidad */
+    90vw 30vh 11px rgba(79, 70, 229, 0.5);
+
+  /* Llamamos a la animación de ascenso infinito */
+  animation: floatUp 20s linear infinite;
+}
+
+/* La animación: mueve todo el contenedor de sombras hacia arriba */
+@keyframes floatUp {
+  0% {
+    /* Empieza en su posición original */
+    transform: translateY(0);
+  }
+  100% {
+    /* Sube hasta que la base del contenedor llegue arriba de la pantalla, 
+       y luego vuelve a empezar */
+    transform: translateY(-100vh);
+  }
+}

@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="burbujas.css" />
 		<meta name="description" content="Prova Flexbox">
 		<title>Flexbox</title>
         <link rel="manifest" href="manifest.json">
@@ -15,7 +16,7 @@
                 .catch(err => console.warn('Error al registrar el Service Worker', err));
             });
           }
-        </script>
+        </script>        
 	</head>
 	<body>
 
@@ -28,8 +29,7 @@
         </nav>
     </header>
 
-    <main class="content-wrapper">
-        
+    <main class="content-wrapper">        
         <section class="hero">
             <h1>001</h1>
             <p>Este es un layout de prueba para practicar CSS Grid, Flexbox y adaptabilidad en diferentes pantallas.</p>
@@ -49,6 +49,7 @@
                 <p>Usa Flexbox dentro de cada tarjeta para alinear el texto y los botones fácilmente.</p>
             </article>
         </section>
+        <section class="bubbles"></section>
 
     </main>
 
