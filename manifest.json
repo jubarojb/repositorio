@@ -1,0 +1,17 @@
+{
+  "short_name": "MiAppAPI",
+  "name": "Mi Primera App con API",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/873/873120.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#f3f4f6",
+  "theme_color": "#4f46e5",
+  "display": "standalone",
+  "orientation": "portrait"
+}
