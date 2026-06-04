@@ -1,0 +1,115 @@
+/* 1. VARIABLES Y CONFIGURACIÓN BASE */
+:root {
+    --primary-color: #4f46e5;   /* Indigo moderno */
+    --text-color: #1f2937;      /* Gris oscuro para lectura */
+    --bg-light: #f3f4f6;        /* Fondo gris claro */
+    --card-bg: #ffffff;         /* Fondo blanco para tarjetas */
+    --padding-base: 1.5rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+}
+
+/* 2. DISEÑO POR DEFECTO: MOBILE-FIRST (Pensado para pantallas pequeñas) */
+
+/* Cabecera con Flexbox */
+.main-header {
+    background-color: var(--card-bg);
+    padding: var(--padding-base);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    /* Flexbox para separar logo y menú */
+    display: flex;
+    flex-direction: column; /* En móvil, uno debajo del otro */
+    gap: 1rem;
+    align-items: center;
+}
+
+.main-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 0.75rem;
+    font-weight: 500;
+}
+
+.main-nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Contenedor principal */
+.content-wrapper {
+    padding: var(--padding-base);
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenido en pantallas gigantes */
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 3rem var(--padding-base);
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+/* Rejilla de Tarjetas (CSS Grid) */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Una sola columna en móvil */
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: var(--padding-base);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+.main-footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+/* 3. MEDIA QUERY: EL SECRETO DEL RESPONSIVE */
+/* Cuando la pantalla mida 768px de ancho o más (Tablets y Escritorios) */
+@media (min-width: 768px) {
+    
+    .main-header {
+        flex-direction: row; /* Cambia a horizontal */
+        justify-content: space-between; /* Logo a la izquierda, menú a la derecha */
+    }
+
+    .hero h1 {
+        font-size: 3rem; /* Texto más grande en escritorio */
+    }
+
+    .grid-container {
+        /* ¡Magia! Se convierte automáticamente en 3 columnas iguales */
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
