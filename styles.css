@@ -1,9 +1,9 @@
 /* 1. VARIABLES Y CONFIGURACIÓN BASE */
 :root {
-    --primary-color: #4f46e5;   /* Indigo moderno */
-    --text-color: #1f2937;      /* Gris oscuro para lectura */
-    --bg-light: #f3f4f6;        /* Fondo gris claro */
-    --card-bg: #ffffff;         /* Fondo blanco para tarjetas */
+    --primary-color: #7E889F;   /* Indigo moderno */
+    --text-color: #2A2A2A;      /* Gris oscuro para lectura */
+    --bg-light: #AFB8C9;        /* Fondo gris claro */
+    --card-bg: #E4DED2;         /* Fondo blanco para tarjetas */
     --padding-base: 1.5rem;
 }
 
@@ -55,7 +55,7 @@ body {
 /* Hero Section */
 .hero {
     background-color: var(--primary-color);
-    color: white;
+    color: #484B53;
     padding: 3rem var(--padding-base);
     border-radius: 12px;
     text-align: center;
