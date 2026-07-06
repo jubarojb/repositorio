@@ -4,5 +4,5 @@ async function loadInclude(id, file) {
     document.getElementById(id).innerHTML = html;
 }
 
-loadInclude('header', 'includes/header.html');
-loadInclude('footer', 'includes/footer.html');
+loadInclude('header', 'http://localhost/web/includes/header.html');
+loadInclude('footer', 'http://localhost/web/includes/footer.html');
