@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../styles.css" />
+        <meta name="description" content="Pruebas de código HTML, CSS y JS">
+        <title>Práctica</title>
+        <link rel="manifest" href="manifest.json">
+        <script>
+          if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+              navigator.serviceWorker.register('./sw.js')
+                .then(reg => console.log('Service Worker registrado con éxito', reg))
+                .catch(err => console.warn('Error al registrar el Service Worker', err));
+            });
+          }
+        </script>
+        <script src="../includes.js"></script>        
+    </head>
+	<body>
+
+    <div id="header"></div>
+
+    <main class="content-wrapper">
+        <h1>Práctica 01</h1>
+        <section>
+        <h2>Anatomia HTML</h2>
+        <ul>
+            <li>HTML
+                <ul>
+                    <li>body
+                        <ul>
+                            <li>main
+                                <ul>
+                                    <li>section</li>
+                                </ul> 
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        </section>
+        <section>
+            <h2>FIGURE</h2>
+            <p><strong>figure</strong>: El elemento figure representa contenido independiente y te permitirá asociar una imagen a una descripción.</p>
+            <p>Un elemento (figcaption), se utiliza para añadir una descripción o leyenda para describir una imagen anidada en un elemento figure.</p>
+        </section>
+
+    </main>
+
+    <div id="footer"></div>
+
+</body>
+</html>
